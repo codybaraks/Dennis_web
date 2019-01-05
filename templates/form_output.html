@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="../static/css/linearicons.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/nice-select.css">
+    <link rel="stylesheet" href="../static/css/hexagons.min.css">
+    <link rel="stylesheet" href="../static/css/animate.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+{#    <link rel="stylesheet" href="contact.css">#}
+</head>
+<body>
+<!--nav sect-->
+
+<div class="container main-menu">
+    <div class="row align-items-center justify-content-between d-flex">
+        <div id="logo">
+            <a href="index.html"><img src="../static/img/logo.png" alt="" title=""/></a>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Service</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li class="menu-has-children"><a href="">Blog</a>
+                    <ul>
+                        <li><a href="blog-home.html">Blog Home</a></li>
+                        <li><a href="blog-single.html">Blog Single</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="elements.html">Elements</a></li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</div>
+<!--form sect-->
+<div class="container">
+    <table class="table" id="example">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Password</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for delegate in delegates %}
+            <tr>
+                <td>{{ delegate[0] }}</td>
+                <td>{{ delegate[1] }}</td>
+                <td>{{ delegate[2] }}</td>
+                <td>{{ delegate[3] }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+</body>
+</html>
