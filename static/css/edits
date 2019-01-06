@@ -1,0 +1,48 @@
+{#                                        <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">#}
+                                        {#                                            <input type="hidden" name="country" value="">#}
+                                        {#                                            <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox"#}
+                                        {#                                               href="#">#}
+                                        {#                                                <span class="bfh-selectbox-option input-medium" data-option=""></span>#}
+                                        {#                                                <b class="caret"></b>#}
+                                        {#                                            </a>#}
+                                        {#                                            <div class="bfh-selectbox-options">#}
+                                        {#                                                <input type="text" class="bfh-selectbox-filter">#}
+                                        {#                                                <div role="listbox">#}
+                                        {#                                                    <ul role="option">#}
+                                        {#                                                    </ul>#}
+                                        {#                                                </div>#}
+                                        {#                                            </div>#}
+                                        {#                                        </div>#}
+                                        {#                                        <input type="country" name="country" class="form-control"#}
+                                        {#                                               id="exampleInputcountry1"#}
+                                        {#                                               aria-describedby="countryHelp"#}
+                                        {#                                               placeholder="Enter country ">#}
+                                        {#                                        <small id="countryHelp" class="form-text text-muted">We'll never#}
+                                        {#                                            share your#}
+                                        {#                                            country with#}
+                                        {#                                            anyone else.#}
+                                        {#                                        </small>#}
+
+
+
+
+
+
+                                    {#                                    <div class="form-group">#}
+                                    {#                                     <label for="exampleInputEmail1">Country</label>#}
+                                    {#                                        <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true" id="bfh-selectbox">#}
+                                    {#                                            <input type="hidden" value="">#}
+                                    {#                                            <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox"#}
+                                    {#                                               href="#">#}
+                                    {#                                                <span class="bfh-selectbox-option input-medium" data-option=""></span>#}
+                                    {#                                                <b class="caret"></b>#}
+                                    {#                                            </a>#}
+                                    {#                                            <div class="bfh-selectbox-options" id="bfh-selectbox">#}
+                                    {#                                                <input type="text" class="bfh-selectbox-filter">#}
+                                    {#                                                <div role="listbox" id="bfh-selectbox">#}
+                                    {#                                                    <option value="">Choose</option>#}
+                                    {#                                                    <ul role="option">#}
+                                    {#                                                    </ul>#}
+                                    {#                                                </div>#}
+                                    {#                                            </div>#}
+                                    {#                                        </div>#}

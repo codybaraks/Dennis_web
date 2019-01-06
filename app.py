@@ -1,10 +1,12 @@
-from flask import Flask, render_template, redirect,url_for, request,flash
+from flask import Flask, render_template, redirect, url_for, request, flash
 import mysql.connector as connector
+from validation import *
 
 db = connector.connect(host="localhost", user="root", passwd="root", database="dennis")
 
 app = Flask(__name__)
 app.secret_key = "fsggrsgsrgrg"
+
 
 @app.route('/home')
 def home():
@@ -28,21 +30,25 @@ def project():
 
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
-    if request.method == 'POST':
-        name = request.form["name"]
-        email = request.form["email"]
-        country = request.form["country"]
-        password = request.form["password"]
+    form = ContactForm()
+    if form.validate_on_submit():
+        if request.method == 'POST':
+            name = request.form["name"]
+            email = request.form["email"]
+            country = request.form["country"]
+            password = request.form["password"]
 
-        print(name, email, country, password)
-        cursor = db.cursor()
-        sql = "INSERT INTO `users`(`name`, `email`, `country`, `password`) VALUES (%s,%s,%s,%s)"
-        val = (name, email, country, password)
-        cursor.execute(sql, val)
-        db.commit()
-        flash("saved in database")
-        # redirect(url_for('show_register'))
-    return render_template('contact.html')
+            print(name, email, country, password)
+            cursor = db.cursor()
+            sql = "INSERT INTO `users`(`name`, `email`, `country`, `password`) VALUES (%s,%s,%s,%s)"
+            val = (name, email, country, password)
+            cursor.execute(sql, val)
+            db.commit()
+            flash("saved in database")
+            # redirect(url_for('show_register'))
+
+    return render_template('contact.html', form=form)
+
 
 @app.route('/form')
 def form():

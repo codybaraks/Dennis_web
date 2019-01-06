@@ -29,21 +29,31 @@
     <link rel="stylesheet" href="../static/css/animate.min.css">
     <link rel="stylesheet" href="../static/css/owl.carousel.css">
     <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-formhelpers.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-formhelpers.min.css" media="screen">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     {#    links for form #}
 
 
     <meta charset="UTF-8">
     <title>Forms</title>
-{#              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">#}
-{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>#}
-{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>#}
+    {#              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">#}
+    {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
-{#           <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>#}
-{#    <link rel="stylesheet" href="../static/css/contact.css">#}
+    #}
+    {#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>#}
+
+    {#           <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>#}
+    {#    <link rel="stylesheet" href="../static/css/contact.css">#}
 
     {#    end of form links#}
+
+    {#    country picker #}
+
+
+    {#    end Country Picker #}
 </head>
 <body>
 <header id="header" id="home">
@@ -110,7 +120,6 @@
 <!-- Start contact-page Area -->
 
 
-
 <!--nav sect-->
 
 <!--form sect-->
@@ -149,42 +158,62 @@
                                         <input type="name" name="name" class="form-control"
                                                id="exampleInputname1"
                                                aria-describedby="nameHelp"
-                                               placeholder="Enter name">
+                                               placeholder="Enter name"
+                                               value="{% if form.name.data %}{{ form.name.data }}{% endif %}">
                                         <small id="nameHelp" class="form-text text-muted">We'll never share
                                             your name
                                             with anyone
                                             else.
                                         </small>
+                                        {% for error in form.name.errors %}
+                                            <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
                                         <input type="email" name="email" class="form-control"
                                                id="exampleInputEmail1"
                                                aria-describedby="emailHelp"
-                                               placeholder="Enter email">
+                                               placeholder="Enter email"
+                                               value="{% if form.email.data %}{{ form.email.data }}{% endif %}">
                                         <small id="emailHelp" class="form-text text-muted">We'll never share
                                             your email
                                             with anyone
                                             else.
                                         </small>
+                                        {% for error in form.email.errors %}
+                                            <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
                                     </div>
+
                                     <div class="form-group">
-                                        <label for="exampleInputcountry1">Country </label>
+                                        <label for="exampleInputEmail1">Country</label>
                                         <input type="country" name="country" class="form-control"
                                                id="exampleInputcountry1"
                                                aria-describedby="countryHelp"
-                                               placeholder="Enter country">
-                                        <small id="countryHelp" class="form-text text-muted">We'll never
-                                            share your
-                                            country with
-                                            anyone else.
+                                               placeholder="Enter country"
+                                           value = "{% if form.country.data %}{{ form.country.data }}{% endif %}">
+                                    <small id="countryHelp" class="form-text text-muted">
+                                        We'll never
+                                        share your
+                                        country with
+                                        anyone else.
                                         </small>
+
+                                        {% for error in form.country.errors %}
+                                            <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
                                     </div>
+
+
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" name="password" class="form-control"
                                                id="exampleInputPassword1"
                                                placeholder="Password">
+                                        {% for error in form.password.errors %}
+                                            <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -210,54 +239,60 @@
 <br>
 <br>
 <!-- start footer Area -->
-	<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-5 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>About Us</h6>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
-								</p>
-{#								<p class="footer-text">#}
-{#									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->#}
-{#Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>#}
-{#<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->#}
-{#								</p>								#}
-							</div>
-						</div>
-						<div class="col-lg-5  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
+<footer class="footer-area section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>About Us</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua.
+                    </p>
+                    {#								<p class="footer-text">#}
+                    {#									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->#}
+                    {#Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>#}
+                    {#<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->#}
+                    {#								</p>								#}
+                </div>
+            </div>
+            <div class="col-lg-5  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>Newsletter</h6>
+                    <p>Stay update with our latest</p>
+                    <div class="" id="mc_embed_signup">
+                        <form target="_blank" novalidate="true"
+                              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                              method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Enter Email"
+                                   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+                                   required="" type="email">
+                            <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
+                                                                         aria-hidden="true"></i></button>
+                            <div style="position: absolute; left: -5000px;">
+                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                            </div>
 
-										<div class="info"></div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-                 <div class="position">
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                <div class="single-footer-widget">
+                    <h6>Follow Us</h6>
+                    <p>Let us be social</p>
+                    <div class="footer-social d-flex align-items-center">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position">
         <div class="row justify-content-center">
             <p class="footer-text">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -292,6 +327,14 @@
 <script src="../static/js/waypoints.min.js"></script>
 <script src="../static/js/mail-script.js"></script>
 <script src="../static/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/js/bootstrap-formhelpers.min.js"></script>
+<script>
+    $(function () {
+        $('#bfh-selectbox input').attr('required', 'required');
+    });
+</script>
+
 </body>
 </html>
 
