@@ -1967,7 +1967,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 673px) {
   #logo {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
 
@@ -1996,7 +1996,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
   }
   #header #logo img {
-    max-height: 40px;
+    max-height: 20px;
+    /*padding-left: 30%;*/
   }
 }
 
@@ -2103,7 +2104,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  color: #fab700;
+  color: #0d98ba;
+}
+.nav-menu ul li:hover  {
+  color: #0d98ba;
 }
 
 .nav-menu ul ul {
