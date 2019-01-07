@@ -36,17 +36,15 @@ def contact():
             name = request.form["name"]
             email = request.form["email"]
             country = request.form["country"]
-            password = request.form["password"]
+            phone = request.form["phone"]
 
-            print(name, email, country, password)
+            print(name, email, country, phone)
             cursor = db.cursor()
-            sql = "INSERT INTO `users`(`name`, `email`, `country`, `password`) VALUES (%s,%s,%s,%s)"
-            val = (name, email, country, password)
+            sql = "INSERT INTO `users`(`name`, `email`, `country`, `phone`) VALUES (%s,%s,%s,%s)"
+            val = (name, email, country, phone)
             cursor.execute(sql, val)
             db.commit()
             flash("saved in database")
-            # redirect(url_for('show_register'))
-
     return render_template('contact.html', form=form)
 
 

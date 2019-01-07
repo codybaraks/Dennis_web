@@ -4,7 +4,8 @@ from wtforms.validators import DataRequired, Email, Length, Regexp
 
 
 class ContactForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired(), Length(min=8, message="Your name is too short")])
+    name = StringField('Name', validators=[DataRequired(), Length(min=2, message="Your name is too short")])
     email = StringField('Email', validators=[DataRequired(), Email(message="Invalid Email")])
-    password = PasswordField('Password', validators=[DataRequired(message="You must provide a password"), Length(min=6, message="Password Too short")])
-    country = StringField('country', validators=[DataRequired()])
+    phone = StringField('Phone', validators=[DataRequired(), Length(min=10, message="short number provided"),
+                                             Regexp('^\d{3}\d{3}\d{4}$',
+                                                    message="You must provide 10 char Phone Number FORMAT [0794..]")])
