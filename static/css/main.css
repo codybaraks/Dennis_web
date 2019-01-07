@@ -2332,9 +2332,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: 0;
   bottom: 0;
 }
-
+/*header-bg*/
 .banner-area {
-  background: url(../img/header-bg.jpg) center;
+  background: url(../img/solar.jpg) center;
   background-size: cover;
 }
 
