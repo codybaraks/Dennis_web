@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request, flash
 import mysql.connector as connector
 from validation import *
 
-db = connector.connect(host="localhost", user="root", passwd="root", database="dennis")
+db = connector.connect(host="localhost", user="root", passwd="root", database="Dennis")
 
 app = Flask(__name__)
 app.secret_key = "fsggrsgsrgrg"
