@@ -33,7 +33,8 @@
 .lnr-pencil:before {
 	content: "\e802";
 }
-.lnr-magic-wand:before {
+/*.lnr-magic-wand*/
+.lnr-lnr-eye:before {
 	content: "\e803";
 }
 .lnr-drop:before {
