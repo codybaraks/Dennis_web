@@ -1906,7 +1906,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-top .header-top-left a:hover i {
-  color: #fab700;
+  color: #3CD0B4;
 }
 
 .header-top .header-top-right {
@@ -2069,7 +2069,14 @@ background-color: #038AD4;
 #nav-menu-container {
   margin: 0;
 }
-
+ww
+{
+    color: #038AD4;
+}
+ee
+{
+    color: #3CD0B4;
+}
 /* Nav Meu Styling */
 .nav-menu a {
   padding: 0 8px 0px 8px;
@@ -2081,7 +2088,10 @@ background-color: #038AD4;
   text-transform: uppercase;
   outline: none;
 }
-
+.nav-menu a:hover
+{
+    color: #038AD4;
+}
 .nav-menu > li {
   margin-left: 10px;
 }
@@ -2412,7 +2422,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .header-btn {
-  background-color: #fab700;
+  background-color: #038AD4;
   border-radius: 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -2866,7 +2876,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-social a:hover i {
-  color: #fab700;
+  color: #3CD0B4;
 }
 
 .footer-social i {
