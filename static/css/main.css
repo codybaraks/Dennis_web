@@ -1912,6 +1912,9 @@ h1, h2, h3, h4, h5, h6 {
 .header-top .header-top-right {
   text-align: right;
 }
+.header-top.header-top-right img {
+background-color: #038AD4;
+}
 
 .header-top .header-top-right a {
   margin-right: 10px;
