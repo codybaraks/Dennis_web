@@ -53,6 +53,21 @@ def contact():
     return render_template('contact.html', form=form)
 
 
+@app.route('/notify', methods=['POST', 'GET'])
+def notify():
+    if request.method == 'POST':
+        subscribe = request.form["subscribe"]
+
+        print(subscribe)
+        cursor = db.cursor()
+        sql2 = "INSERT INTO `notification`(`subscribe`) VALUES (%s)"
+        val = (subscribe,)
+        cursor.execute(sql2, val)
+        db.commit()
+        flash("You're in, Thank you for Subscribing")
+    return render_template('index.html')
+
+
 @app.route('/form')
 def form():
     return render_template('contact.html')
