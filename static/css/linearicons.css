@@ -34,7 +34,7 @@
 	content: "\e802";
 }
 /*.lnr-magic-wand*/
-.lnr-lnr-eye:before {
+.lnr-magic-wand:before {
 	content: "\e803";
 }
 .lnr-drop:before {
@@ -534,4 +534,9 @@
 }
 .lnr-pointer-left:before {
 	content: "\e8a9";
+}
+.lnr-rocket
+{
+	/*color: #3CD0B4;*/
+	/*background-color: #3CD0B4;*/
 }

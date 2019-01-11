@@ -2422,7 +2422,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .header-btn {
-  background-color: #038AD4;
+  background-color: #0EA1A6;
   border-radius: 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -2470,7 +2470,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .cat-area .hb-facebook-inv:hover, .cat-area .hb-facebook-inv:hover::after, .cat-area .hb-facebook-inv:hover::before {
-  background-color: #fab700;
+  background-color: #3CD0B4; /*fab700*/
   border-color: #A7A7A7;
   color: #fff;
 }
@@ -2593,7 +2593,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-service:hover h4 {
-  color: #fab700;
+  color: #3CD0B4; /*fab700*/
 }
 
 .single-service .thumb {
@@ -2695,9 +2695,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
   padding-top: 60px;
 }
-
+.text-color
+{
+  color: white;
+  text-transform: uppercase;
+  /*font-family: Arial, Baskerville, monospace;*/
+  font-weight: bolder;
+}
 .feedback-area {
-  background: url(../img/feedback-bg.jpg) center;
+  background: url(../img/feed.jpg) center;
   background-size: cover;
 }
 
