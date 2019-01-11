@@ -2633,7 +2633,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .faq-area {
-  background: url(../img/fact.jpg) center;
+  background: url(../img/warehouse.jpeg) center; /*../img/fact.jpg*/
   background-size: cover;
 }
 
@@ -2672,13 +2672,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .circle {
-  border: 1px solid #fab700;
+  border: 1px solid #3CD0B4; /*fab700*/
   border-radius: 68px;
   display: inline-block;
 }
 
 .inner {
-  background-color: #fab700;
+  background-color: #3CD0B4; /*fab700*/
   border-radius: 50px;
   margin: 24px;
   height: 90px;
@@ -2702,12 +2702,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .overlay-bg {
-  background-color: #000;
-  opacity: .7;
+  background-color: #3CD0B4;
+  opacity: .3;
 }
-
+/*../img/video-bg.jpg*/
 .feedback-left {
-  background: url(../img/video-bg.jpg) center;
+  background: url(../img/auto.jpg) center;
   background-size: cover;
   padding: 130px 0;
 }
