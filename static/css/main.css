@@ -2737,7 +2737,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feedback-right .star .checked {
-  color: orange;
+  color: #3CD0B4;
 }
 
 .feedback-right .owl-dots {
@@ -2769,7 +2769,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background: #fab700;
+  background: #038AD4; /*fab700*/
 }
 
 .blog-area h1 {

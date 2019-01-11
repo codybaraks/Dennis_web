@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="3024" column="13" selection-start-line="3024" selection-start-column="13" selection-end-line="3024" selection-end-column="13" />
+            <state relative-caret-position="118">
+              <caret line="2734" column="21" selection-start-line="2734" selection-start-column="17" selection-end-line="2734" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4289">
-              <caret line="307" column="24" lean-forward="true" selection-start-line="307" selection-start-column="24" selection-end-line="307" selection-end-column="24" />
+            <state relative-caret-position="-59">
+              <caret line="370" column="43" selection-start-line="370" selection-start-column="43" selection-end-line="370" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -111,10 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>country</find>
-      <find>logo</find>
-      <find>nav</find>
-      <find>nav-menu</find>
       <find>nav-menu ul</find>
       <find>banner</find>
       <find>header-bg</find>
@@ -127,7 +123,6 @@
       <find>submitt</find>
       <find>container</find>
       <find>overlay</find>
-      <find>single-f</find>
       <find>inner</find>
       <find>header-btn</find>
       <find>bg</find>
@@ -141,6 +136,11 @@
       <find>footer-te</find>
       <find>click-btn</find>
       <find>.position</find>
+      <find>star</find>
+      <find>car</find>
+      <find>single-f</find>
+      <find>fa-</find>
+      <find>fa</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;static/css/</replace>
@@ -166,11 +166,11 @@
         <option value="$PROJECT_DIR$/validation.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/contact.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/services.html" />
         <option value="$PROJECT_DIR$/templates/projects.html" />
         <option value="$PROJECT_DIR$/templates/about.html" />
         <option value="$PROJECT_DIR$/static/css/linearicons.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
       </list>
     </option>
@@ -285,12 +285,12 @@
       <workItem from="1546875702145" duration="13893000" />
       <workItem from="1546896073981" duration="1160000" />
       <workItem from="1547149982055" duration="12388000" />
-      <workItem from="1547200358217" duration="14679000" />
+      <workItem from="1547200358217" duration="15188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88664000" />
+    <option name="totallyTimeSpent" value="89173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="728" extended-state="6" />
@@ -301,7 +301,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3410596" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3410596" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -311,7 +311,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.28145695" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.28145695" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -482,15 +482,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4289">
-          <caret line="307" column="24" lean-forward="true" selection-start-line="307" selection-start-column="24" selection-end-line="307" selection-end-column="24" />
+        <state relative-caret-position="-59">
+          <caret line="370" column="43" selection-start-line="370" selection-start-column="43" selection-end-line="370" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="3024" column="13" selection-start-line="3024" selection-start-column="13" selection-end-line="3024" selection-end-column="13" />
+        <state relative-caret-position="118">
+          <caret line="2734" column="21" selection-start-line="2734" selection-start-column="17" selection-end-line="2734" selection-end-column="21" />
         </state>
       </provider>
     </entry>
