@@ -2940,7 +2940,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 /*change color*/
 .single-footer-widget .click-btn {
-  background-color: #fab700;
+  background-color: #3CD0B4; /*fab700*/
   color: #fff;
   border-radius: 0;
   border-top-left-radius: 0px;
@@ -3010,12 +3010,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*Position the footer-text center*/
 .position
 {
+
    font-size: 0.9em;
      text-align: center;
      position: absolute;
      bottom: 0;
      vertical-align: bottom;
      width:100%;
+
+}
+.position p {
+  color: #3CD0B4;
+}
+.position p a{
+  color: #038AD4;
+  text-decoration: underline;
 }
 .footer-text a, .footer-text i {
   color: #fab700;
