@@ -2457,6 +2457,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-left: auto;
   margin-right: auto;
 }
+.cat-area .single-cat b {
+
+  color: #038AD4;
+}
 
 .cat-area .hb-sm {
   line-height: 40px;
