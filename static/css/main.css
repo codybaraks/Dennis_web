@@ -2460,6 +2460,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .cat-area .single-cat b {
 
   color: #038AD4;
+  text-decoration: underline;
 }
 
 .cat-area .hb-sm {
