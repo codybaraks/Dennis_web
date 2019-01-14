@@ -92,5 +92,12 @@ def form():
     return render_template('contact.html')
 
 
+# to Handle Exceptions
+
+@app.errorhandler(404)
+def error_page(e):
+    return render_template('Error_page.html')
+
+
 if __name__ == '__main__':
     app.run()

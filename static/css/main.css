@@ -3582,6 +3582,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
   background: #f9f9ff;
 }
+.cover{
+    color: rgb(255, 255, 255);
+    position: relative;
+    min-height: 350px;
+    background-image: url("../img/error_404.png")
+/**no-repeat scroll 0px 100% / cover transparent;**/
+}
 
 /*
 ################
