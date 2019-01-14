@@ -68,6 +68,25 @@ def notify():
     return render_template('index.html')
 
 
+@app.route('/feedback', methods=['POST', 'GET'])
+def feedback():
+    if request.method == 'POST':
+        service = request.form["service"]
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        message = request.form['message']
+
+        print(service, name, email, phone, message)
+        cursor = db.cursor()
+        sql2 = "INSERT INTO `feedback`(`service`, `name`, `email`, `phone`, `message`) VALUES (%s,%s,%s,%s,%s)"
+        val = (service, name, email, phone, message)
+        cursor.execute(sql2, val)
+        db.commit()
+        flash("Thank you for you Honest Feedback")
+    return render_template('about.html')
+
+
 @app.route('/form')
 def form():
     return render_template('contact.html')
