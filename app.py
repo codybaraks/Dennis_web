@@ -1,11 +1,28 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
 import mysql.connector as connector
+from flask_mail import Mail, Message
+from itsdangerous import URLSafeSerializer, SignatureExpired
+
 from validation import *
 
 db = connector.connect(host="localhost", user="root", passwd="root", database="dennis")
 
+# mycursor = db.cursor()
+
 app = Flask(__name__)
+app.config['MAIL_SERVER']='smtp.googlemail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'earvinbaraka@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Commandprompt.1'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
+app.config.from_pyfile('config.cfg')
+
+
 app.secret_key = "fsggrsgsrgrg"
+
+s = URLSafeSerializer('secretthistime!')
 
 
 @app.route('/')
@@ -33,6 +50,11 @@ def project():
     return render_template('projects.html')
 
 
+@app.route('/form')
+def form():
+    return render_template('contact.html')
+
+
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     form = ContactForm()
@@ -55,17 +77,20 @@ def contact():
 
 @app.route('/notify', methods=['POST', 'GET'])
 def notify():
-    if request.method == 'POST':
-        subscribe = request.form["subscribe"]
+    form = ContactForm()
+    if form.validate_on_submit():
+        if request.method == 'POST':
+            subscribe = request.form["subscribe"]
 
-        print(subscribe)
-        cursor = db.cursor()
-        sql2 = "INSERT INTO `notification`(`subscribe`) VALUES (%s)"
-        val = (subscribe,)
-        cursor.execute(sql2, val)
-        db.commit()
-        flash("You're in, Thank you for Subscribing")
-    return render_template('index.html')
+            print(subscribe)
+            cursor = db.cursor()
+            sql2 = "INSERT INTO `notification`(`subscribe`) VALUES (%s)"
+            val = (subscribe,)
+            cursor.execute(sql2, val)
+            db.commit()
+            flash("You're in, Thank you for Subscribing")
+
+    return render_template('index.html', form=form)
 
 
 @app.route('/feedback', methods=['POST', 'GET'])
@@ -87,9 +112,42 @@ def feedback():
     return render_template('about.html')
 
 
-@app.route('/form')
-def form():
-    return render_template('contact.html')
+# Mail Section
+
+@app.route('/mailing', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        subscribe = request.form['subscribe']
+        token = s.dumps(subscribe, salt='email-confirm')
+        print(subscribe)
+
+        cursor = db.cursor()
+        sql = "INSERT INTO `notification`(`subscribe`)VALUES (%s)"
+        val = (subscribe,)
+        cursor.execute(sql, val)
+        db.commit()
+        flash('Thank you For subscribing')
+
+        msg = Message(subject='Eximix Subscription', sender='earvinbaraka@gmail.com',recipients=[request.form['subscribe']])
+        link = url_for('conf_email', token=token, _external=True)
+        msg.body = render_template('newsletters.html', token=token, link=link)
+
+        mail.send(msg)
+
+    return render_template('index.html', token=token)
+
+
+# '<h1>The email you entered is {}. The token is {}</h1>'.format(email, token)
+
+
+@app.route('/conf_email/<token>')
+def conf_email(token):
+    try:
+        subscribe = s.loads(token, salt='email-confirm')
+    except SignatureExpired:
+        return '<h1>The token is expired!</h1>'
+    # return '<h1>The token works!</h1>'
+    return render_template('index.html')
 
 
 # to Handle Exceptions
